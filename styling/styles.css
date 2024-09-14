@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* navigation bar styling */
+
+header {
+    background-color: pink;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav a {
+    color: purple;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+header nav i {
+    color: palevioletred;
+}
+
+header nav i:hover {
+    color: #eee;
+}
+
+
+#search-bar {
+    display: none;
+    border-radius: 5px;
+    background-color: transparent;
+    background-color: rgb(241, 239, 239);
+}
+
+#search-bar {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+  #search-bar:focus {
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* navigation bar styling ends here */
+
+/* tabs start */
+
+main {
+    padding-top: 20px;
+    margin: 20px;
+}
+
+.success-stories {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.success-stories h1 {
+    font-size: 2.5em;
+    padding-left: 60px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab-btn {
+    width: 12%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: pink;
+}
+
+.tab-btn:hover{
+    background-color: darkcyan;
+    color: pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #f1e9f1;
+}
+
+.tab-btn.active{
+    background-color: darkcyan;
+    color: pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #f1e9f1;
+}
+
+.tab-content{
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active{
+    display: block;
+}
+
+
+/* tabs end */
+
+/* about us start  */
+
+.aboutusContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.heading h1 {
+    padding-left: 20px;
+}
+
+.aboutus, .vision, .mission, .whatwedo, .joinus {
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(140, 217, 217);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus h2, .vision h2, .mission h2, .whatwedo h2, .joinus h2 {
+    margin-top: 0;
+}
+
+.aboutus p, .vision p, .mission p, .whatwedo p, .joinus p {
+    margin-bottom: 20px;
+}
+
+.mission ul, .whatwedo ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.mission li, .whatwedo li {
+    margin-bottom: 10px;
+}
+
+/* tab content start */
+
+.blogsContainer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.blogCard {
+    width: 30%;
+    text-align: center;
+    padding: 0 0 25px 0;
+    margin: 0 15px;
+    background-color: darkcyan;
+    border-radius: 8px;
+}
+
+.blogCard p, h3, a{
+    padding: 0 20px;
+}
+
+.blogCard p{
+    height: 90px;
+    overflow: hidden;
+}
+
+.blogPhotoContainer img{
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+/* about us end */
+
+/* blog page css starts */
+
+.blogContainer{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#blog{
+ width: 900px;
+ background-color: pink;
+ padding-bottom: 30px;
+}
+
+#blog img{
+    width: 100%;
+}
+
+#blog .blogAuthor{
+    float: left;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+#blog .blogDate{
+    float: right;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+#blog p{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+}
+
+#blog h2{
+    padding: 20px;
+}
+
+#go-back-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+    margin-left: 45%;
+}
+  
+  #go-back-btn:hover {
+    background-color: #444;
+}
+
+
+
+/* blog page css ends */
+
+/* footer styling starts here */
+.footer{
+    background-color: pink;
+    
+    padding: 20px 10px 5px 10px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footerSection {
+    padding: 0 20px;
+    max-width: 300px;
+}
+
+
+.footerSection h4 {
+    margin: 0;
+    color: #c467a0;
+}
+
+.footerSection p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #010101;
+}
+
+.footerSection a{
+    text-decoration: none;
+    color: #000;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 1px;
+    color: #010101;
+}
+
+
+/* footer styling ends here */

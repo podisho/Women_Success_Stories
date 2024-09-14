@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./styling/styles.css">
+    <script src="https://kit.fontawesome.com/77cc4812f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--navigation bar-->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo">
+            <span>Women Success Stories</span>
+        </div>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./AboutUs.html">About Us</a>
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>  
+            <input type="search" id="search-bar" placeholder="Search For Story...">
+        </nav>
+     </header>
+     <!--navigation bar ends here-->
+
+     <!--main content starts here-->
+     <div class="blogContainer">
+
+        <div id="blog">
+            
+        </div>
+
+     </div>
+     <div id="go-back-container"></div>
+    
+ <!--main content ends here-->
+    
+
+    <!--footer starts here-->
+    <div class="footer">
+        <div class="footerContainer">
+            <div class="footerSection">
+                <h4>Contact Us</h4>
+                <p>
+                    <span class="titleText">Email: </span> <a href="mailto:successwowenstories03@gmail.com">successwomenstories03@gmail.com</a>
+                </p>
+                <p>
+                    <span class="titleText">Phone: </span> <a href="tel:0116742348">0116742348</a>
+                </p>
+                <p>
+                    <span class="titleText">Address: </span> 5420 Gallagher Estates, Midrand 1025
+                </p>
+            </div>
+            <div class="footerSection">
+                <h4>Meet The Team</h4>
+                <p><a href="https://www.linkedin.com/in/bokamoso-ramadie-b762b02a1/">Bokamoso Ramadie</a></p>
+                <p><a href="https://www.linkedin.com/in/podisho-sebopela-b7570026a/">Podisho Sebopela</a></p>
+                <p><a href="https://www.linkedin.com/in/n-j-tumelo-phatlane-511116263/">Tumelo Phatlane</a></p>
+            </div>
+            <div class="footerSection">
+                <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/race_gear1?igsh=MTN4cnZ3MWhtOHZoNQ=="> <i class="fa-brands fa-square-instagram"></i></a>
+            <a href="mailto:racegear03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
+        </div>
+        <p class="copyright">&copy; 2024 successwomenstories. All rights reserved.</p>
+    </div>
+ <!--footer ends here-->
+
+
+    <!-- javascript file -->
+     <script src="./functionality/blogsArray.js"></script>
+     <script src="./functionality/script.js"></script>
+     <script>
+        // Function to create blog
+        function createBlog(blog) {
+            return `
+                <div class="blogImg">
+                    <img src="images/${blog.img}" alt="Blog Image">
+                    <p>
+                        <span class="blogAuthor">Author: ${blog.author}</span>
+                        <span class="blogDate">Published: ${blog.date}</span>
+                    </p>
+                </div>
+                <h2 class="blogTitle">${blog.title}</h2>
+                <p class="blogParagraph">${blog.p1}</p>
+                <p class="blogParagraph">${blog.p2}</p>
+                <p class="blogParagraph">${blog.p3}</p>
+            `;
+        }
+
+        // get title from url
+        const title = new URLSearchParams(window.location.search).get("title").toString();
+        
+
+        blogs.forEach(blog => {
+            if (blog.title === title) {
+                document.getElementById("blog").innerHTML = createBlog(blog);
+            }
+        });
+
+        // Add a "Go Back" button to the page
+const goBackBtn = document.createElement('button');
+goBackBtn.textContent = 'Go Back';
+goBackBtn.id = 'go-back-btn';
+document.getElementById('go-back-container').appendChild(goBackBtn);
+
+// Add an event listener to the "Go Back" button
+goBackBtn.addEventListener('click', function() {
+  history.back();
+});
+
+     </script>
+</body>
+</html>
