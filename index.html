@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Success Stories</title>
+    <link rel="stylesheet" href="./styling/styles.css">
+    <script src="https://kit.fontawesome.com/77cc4812f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--navigation bar-->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo">
+            <span>Women Success Stories</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>  
+            <input type="search" id="search-bar" placeholder="Search For Story...">
+        </nav>
+     </header>
+     <!--navigation bar ends here-->
+
+     <!-- Tabs -->
+     <main>
+        <section class="success-stories">
+            <h1>Success Stories</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab1" id="allStories-btn"><i class="fa-solid fa-book"></i> <br> What's Trending</button>
+                <button class="tab-btn" data-tab="tab2" id="beauty-btn"><i class="fa-regular fa-face-laugh-beam"></i> <br> Beauty</button>
+                <button class="tab-btn" data-tab="tab3" id="motherhood-btn"><i class="fa-solid fa-person-breastfeeding"></i> <br> Motherhood</button>
+                <button class="tab-btn" data-tab="tab4" id="mentalHealth-btn"><i class="fa-solid fa-brain"></i> <br> Mental health</button>
+                <button class="tab-btn" data-tab="tab5" id="enterpreneurship-btn"><i class="fa-brands fa-shopify"></i> <br> Enterpreneurship</button>
+                <button class="tab-btn" data-tab="tab6" id="womenInTech-btn"><i class="fa-solid fa-chalkboard-user"></i> <br> Women in Tech</button>
+                <button class="tab-btn" data-tab="tab7" id="lifestyleAndTravel-btn"><i class="fa-solid fa-plane-departure"></i> <br> Lifestyle & Travel</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tabs content -->
+     <div>
+        <div class="tab-content active" id="tab1">
+            <div class="blogsContainer">
+                <div class="blogCard">
+                    <div class="blogPhotoContainer">
+                        <img src="./images/f1.jpg" alt="blog photo" class="blogPhoto">
+                    </div>
+                    <h3 class="blogTitle">Title</h3>
+                    <p class="blogSummary">Summary</p>
+                    <a href="blog.html?title=blogTitle" id="read-more-link">Read More</a>
+                 </div>
+                <div class="blogCard">
+                    <div class="blogPhotoContainer">
+                        <img src="./images/f1.jpg" alt="blog photo" class="blogPhoto">
+                    </div>
+                    <h3 class="blogTitle">Title</h3>
+                    <p class="blogSummary">Summary</p>
+                    <a href="blog.html?title=blogTitle">Read More</a>
+                </div>
+                <div class="blogCard">
+                    <div class="blogPhotoContainer">
+                        <img src="./images/f1.jpg" alt="blog photo" class="blogPhoto">
+                    </div>
+                    <h3 class="blogTitle">Title</h3>
+                    <p class="blogSummary">Summary</p>
+                    <a href="blog.html?title=blogTitle">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="tab2">
+            <div class="blogsContainer beauty">
+                
+            </div>
+        </div>
+        <div class="tab-content" id="tab3">
+            <div class="blogsContainer">
+                
+            </div>
+        </div>
+        <div class="tab-content" id="tab4">
+            <div class="blogsContainer">
+                
+            </div>
+        </div>
+        <div class="tab-content" id="tab5">
+            <div class="blogsContainer">
+                
+            </div>
+        </div>
+        <div class="tab-content" id="tab6">
+            <div class="blogsContainer" >
+                
+            </div>
+        </div>
+        <div class="tab-content" id="tab7">
+            <div class="blogsContainer" >
+                
+            </div>
+        </div>
+     </div>
+    
+      <!--footer starts here-->
+<div class="footer">
+    <div class="footerContainer">
+        <div class="footerSection">
+            <h4>Contact Us</h4>
+            <p>
+                <span class="titleText">Email: </span> <a href="mailto:successwowenstories03@gmail.com">successwomenstories03@gmail.com</a>
+            </p>
+            <p>
+                <span class="titleText">Phone: </span> <a href="tel:0116742348">0116742348</a>
+            </p>
+            <p>
+                <span class="titleText">Address: </span> 5420 Gallagher Estates, Midrand 1025
+            </p>
+        </div>
+        <div class="footerSection">
+            <h4>Meet The Team</h4>
+            <p><a href="https://www.linkedin.com/in/bokamoso-ramadie-b762b02a1/">Bokamoso Ramadie</a></p>
+            <p><a href="https://www.linkedin.com/in/podisho-sebopela-b7570026a/">Podisho Sebopela</a></p>
+            <p><a href="https://www.linkedin.com/in/n-j-tumelo-phatlane-511116263/">Tumelo Phatlane</a></p>
+        </div>
+        <div class="footerSection">
+            <h4>Follow Us</h4>
+           <a href="https://www.instagram.com/race_gear1?igsh=MTN4cnZ3MWhtOHZoNQ=="> <i class="fa-brands fa-square-instagram"></i></a>
+           <a href="mailto:racegear03@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        
+        
+    </div>
+    <p class="copyright">&copy; 2024 successwomenstories. All rights reserved.</p>
+</div>
+ <!--footer ends here-->
+
+
+    <!-- javascript file -->
+     <script src="./functionality/script.js"></script>
+     <script src="./functionality/blogsArray.js"></script>
+     <script>
+        // Function to create blog cards
+        function createBlogCard(blog) {
+            return `
+            <div class="blogCard">
+                <div class="blogPhotoContainer">
+                <img src="images/${blog.img}" alt="blog photo" class="blogPhoto">
+                </div>
+                <h3 class="blogTitle">${blog.title}</h3>
+                <p class="blogSummary">${blog.p1}</p>
+                <a href="blog.html?title=${blog.title}">Read More</a>
+            </div>
+            `;
+        }
+        
+        // Function to load blogs by category
+        function loadBlogs() {
+            const categories = {
+            "Beauty": document.querySelector("#tab2 .blogsContainer"),
+            "Motherhood": document.querySelector("#tab3 .blogsContainer"),
+            "MentalHealth": document.querySelector("#tab4 .blogsContainer"),
+            "Enterpreneurship": document.querySelector("#tab5 .blogsContainer"),
+            "WomenInTech": document.querySelector("#tab6 .blogsContainer"),
+            "Lifestyle": document.querySelector("#tab7 .blogsContainer"),
+            //"WhatsTrending": document.querySelector("#tab1 .blogsContainer"), // Default to tab1 for any missing category
+            };
+
+            // Sort blogs by views in descending order
+    blogs.sort((a, b) => b.views - a.views);
+
+// Display the first 3 blogs in the "What's Trending" tab
+let trendingBlogs = "";
+for (let i = 0; i < Math.min(3, blogs.length); i++) {
+    trendingBlogs += createBlogCard(blogs[i]);
+}
+document.querySelector("#tab1 .blogsContainer").innerHTML = trendingBlogs;
+
+// display other blogs in other tabs
+
+            blogs.forEach(blog => {
+            if (categories[blog.category]) {
+                categories[blog.category].innerHTML += createBlogCard(blog);
+            }
+            });
+        }
+
+        loadBlogs();
+
+     </script>
+</body>
+</html>
